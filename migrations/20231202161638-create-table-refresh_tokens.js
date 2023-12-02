@@ -38,9 +38,9 @@ module.exports = {
       }
     })
 
-    await queryInterface.addConstraint('refresh_token', {
+    await queryInterface.addConstraint('refresh_tokens', {
       type: 'foreign key',
-      name: 'REFRESH_TOKEN_USER_ID',
+      name: 'REFRESH_TOKENS_USER_ID',
       fields: ['user_id'],
       references: {
         table: 'users',
@@ -58,6 +58,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.dropTable('refresh-tokens')
+    await queryInterface.dropTable('refresh_tokens')
   }
 };
